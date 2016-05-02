@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/material-icons/material-icons.css">
+    <link rel="stylesheet" href="css/material.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="iot-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+      <header class="iot-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Applicances</span>
+          <div class="mdl-layout-spacer"></div>
+          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="hdrbtn">
+            <i class="material-icons">more_vert</i>
+          </button>
+          <ul class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--bottom-right" for="hdrbtn">
+            <li class="mdl-menu__item">About</li>
+          </ul>
+        </div>
+      </header>
+      <div class="iot-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+        <header class="iot-drawer-header">
+          <img src="images/user.jpg" class="iot-avatar">
+          <div class="iot-avatar-dropdown">
+            <span>hello@example.com</span>
+            <div class="mdl-layout-spacer"></div>
+            <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+              <i class="material-icons" role="presentation">arrow_drop_down</i>
+              <span class="visuallyhidden">Accounts</span>
+            </button>
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+              <li class="mdl-menu__item">Logout</li>
+            </ul>
+          </div>
+        </header>
+        <nav class="iot-navigation mdl-navigation mdl-color--blue-grey-800">
+          <a class="mdl-navigation__link" href="">
+            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">lightbulb_outline</i>Appliances
+          </a>
+          <a class="mdl-navigation__link" href="">
+            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">perm_device_information</i>Devices
+          </a>
+          <a class="mdl-navigation__link" href="">
+            <i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">settings</i>Settings
+          </a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content mdl-color--grey-100">
+        <div class="mdl-grid iot-content">
+          
+          <div class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp">
+            <div class="mdl-card__title">
+              <div>
+              <h3 class="mdl-card__title-text mdl-color-text--blue-grey-800" style="width:100%">Light Bulb 1 </h3>
+                <div class="mdl-card__subtitle-text">On Device 0001</div>
+              </div>
+              <div class="mdl-layout-spacer"></div>
+              <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" style="width: auto" for="light-1-switch">
+                <input type="checkbox" id="light-1-switch" class="mdl-switch__input">
+                <span class="mdl-switch__label"></span>
+              </label>
+            </div>
+
+            <div class="mdl-card__supporting-text">
+                <span> Brightness : </span>
+                  <input id="lightIntensity" class="mdl-slider mdl-js-slider" type="range" min="0" max="255" value="0" tabindex="0">
+            </div>
+          </div>
+          <div class="mdl-card mdl-cell mdl-cell--4-col mdl-shadow--2dp">
+            <div class="mdl-card__title">
+              <div>
+              <h3 class="mdl-card__title-text mdl-color-text--blue-grey-800" style="width:100%">LFan 1 </h3>
+                <div class="mdl-card__subtitle-text">On Device 0001</div>
+              </div>
+              <div class="mdl-layout-spacer"></div>
+              <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" style="width: auto" for="fan-1-switch">
+                <input type="checkbox" id="fan-1-switch" class="mdl-switch__input">
+                <span class="mdl-switch__label"></span>
+              </label>
+            </div>
+            <div class="mdl-card__supporting-text" style="display:flex; flex-direction: row">
+            <div class="animate" id="animation-speedometer">
+              <div id="animation-speedometer-needle"></div>
+            </div>
+            <div style="display: flex; flex-direction: column">
+              <!-- Colored mini FAB button -->
+<button id="fan-speed-up" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">
+  <i class="material-icons">arrow_drop_up </i>
+</button>
+<!-- Colored mini FAB button -->
+<button id="fan-speed-down" class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">
+  <i class="material-icons">arrow_drop_down</i>
+</button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+      
+    <script src="js/material.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

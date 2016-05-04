@@ -249,6 +249,10 @@ _:-ms-input-placeholder, :root .iot-graph {
     align-items: center;
 }
 
+.animate {
+    margin: 10px;
+}
+
 #animation-speedometer {
     position: relative;
     display: block;
